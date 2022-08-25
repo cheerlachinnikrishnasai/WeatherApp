@@ -20,7 +20,7 @@ const App = () => {
         const cityNameInApi = data.name
         if(city !== cityNameInApi)
         {
-          setResult(`Please provide valid city name`)
+          setResult(`Please provide valid city name (or) chnage the first letter of city name by capital letter`)
         }
         else{
           setResult("The Temperature at " + city + " is " +  data.main.temp + "°C")
