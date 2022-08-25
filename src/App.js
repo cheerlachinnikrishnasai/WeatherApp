@@ -17,10 +17,11 @@ const App = () => {
       .then(response => 
         response.json()
       ).then((data) =>{
-        const cityNameInApi = data.name
-        if(city !== cityNameInApi)
+        const cityNameInApi = (data.name).toLowerCase()
+        const cityLower = city.toLowerCase()
+        if(cityLower !== cityNameInApi)
         {
-          setResult(`Please provide valid city name (or) chnage the first letter of city name by capital letter`)
+          setResult(`Please provide valid city name`)
         }
         else{
           setResult("The Temperature at " + city + " is " +  data.main.temp + "°C")
@@ -48,7 +49,10 @@ const App = () => {
             <i><big><font size="+8" >{result}</font></big></i>
           </div>
         </form>
-        <footer>Note: For Tirupati Weather Report , Please type the input field as "Tirumala - Tirupati"</footer>
+        <footer>Please type the firt letter as capital letter for city ,For Example :London.<br />
+                <hr />
+                Note: For Tirupati Weather Report , Please type the input field as "Tirumala - Tirupati"
+        </footer>
       </center>
     </div>
   )
