@@ -49,8 +49,7 @@ const App = () => {
             <i><big><font size="+8" >{result}</font></big></i>
           </div>
         </form>
-        <footer>Please type the firt letter as capital letter for city ,For Example :London.<br />
-                <hr />
+        <footer>
                 Note: For Tirupati Weather Report , Please type the input field as "Tirumala - Tirupati"
         </footer>
       </center>
